@@ -1,0 +1,8 @@
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\bin\Debug\netstandard2.0\FrameworkLibrary.deps.json
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\bin\Debug\netstandard2.0\FrameworkLibrary.dll
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\bin\Debug\netstandard2.0\FrameworkLibrary.pdb
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.AssemblyInfoInputs.cache
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.AssemblyInfo.cs
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.csproj.CoreCompileInputs.cache
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.dll
+D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.pdb

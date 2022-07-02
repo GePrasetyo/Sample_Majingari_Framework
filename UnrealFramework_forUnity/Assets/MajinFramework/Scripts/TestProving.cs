@@ -7,7 +7,14 @@ public class TestProving : MonoBehaviour
 
     private void Start()
     {
-        ValidateThings();
+
+        var i = 0;
+        Debug.Log("Test : " + i++);
+        Debug.Log("Test : " + ++i);
+
+
+
+        //ValidateThings();
     }
 
     public void ValidateThings()

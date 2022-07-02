@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uj+4/iksco31rOUKALCoPaizvKK66KpHZV/BLZlrzdKxqqdNnz625DeeFVIsyd+4W2JEs7s6QhuNGBSR0sCMow==",
+  "success": true,
+  "projectFilePath": "D:\\Anbu\\UnrealFramework\\C#Library\\FrameworkLibrary\\FrameworkLibrary\\FrameworkLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Randy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Randy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
