@@ -8,7 +8,7 @@ namespace Majingari.Framework
     {
         private GameWorldSettings _target;
 
-        [MenuItem("Window/Game Word Settings/Get World Settings")]
+        [MenuItem("Game Word Settings/Get World Settings")]
         public static void GetTheInstance()
         {
             var obj = Resources.FindObjectsOfTypeAll<GameWorldSettings>();
@@ -26,7 +26,7 @@ namespace Majingari.Framework
         }
 
 
-        [MenuItem("Window/Game Word Settings/Restart Settings")]
+        [MenuItem("Game Word Settings/Restart Settings")]
         public static void ResetSettings()
         { 
             var obj = Resources.FindObjectsOfTypeAll<GameWorldSettings>();

@@ -8,13 +8,18 @@ namespace Majingari.Framework.World
     [CreateAssetMenu(fileName = "Default World Config", menuName = "Config Object/World Config")]
     public class WorldConfig : ScriptableObject
     {
-        private WorldConfigList[] mapList;
+        [SerializeField] private WorldConfigList[] mapList;
         public Dictionary<SceneAsset, GameModeManager> MapConfigList = new Dictionary<SceneAsset, GameModeManager>();
 
-        private void OnValidate() {
+        public void SetupMapConfigList() {
             MapConfigList.Clear();
 
-            for (int x=0; x<mapList.Length; x++) {
+            Debug.Log("Setup Map Config");
+
+            if (mapList.Length == 0)
+                return;
+
+            for (int x = 0; x < mapList.Length; x++) {
                 MapConfigList.Add(mapList[x].Map, mapList[x].TheGameMode);
             }
         }
