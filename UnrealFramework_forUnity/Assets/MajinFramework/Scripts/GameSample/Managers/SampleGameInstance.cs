@@ -1,9 +1,9 @@
 using UnityEngine;
-using Majingari.Framework;
 
-public class SampleGameInstance : GameInstance
-{
-    public SampleGameInstance() {
-        
+namespace Majingari.Framework {
+    public class SampleGameInstance : GameInstance {
+        public SampleGameInstance() : base() {
+
+        }
     }
 }
