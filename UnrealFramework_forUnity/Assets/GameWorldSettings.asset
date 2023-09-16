@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa58e31dd2c424e947536a3597f57a, type: 3}
   m_Name: GameWorldSettings
   m_EditorClassIdentifier: 
-  classGameInstance: {fileID: 11500000, guid: c6470d0ebe436bd4197052b8d8621111, type: 3}
-  worldConfigObject: {fileID: 11400000, guid: 69cecbddae73c1c47a5ef9e30ad13ce1, type: 2}
+  classGameInstance:
+    rid: -2
+  worldConfigObject: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

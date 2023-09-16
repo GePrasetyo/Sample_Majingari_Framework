@@ -1,16 +1,17 @@
 using UnityEngine;
-using UnityEditor;
 using System;
-using System.Reflection;
 using Majingari.Framework.World;
-
 using Object = UnityEngine.Object;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace Majingari.Framework
 {
     public sealed class GameWorldSettings : ScriptableObject
     {
-        [SerializeField] private MonoScript classGameInstance;
+        [SerializeReference] public GameInstance classGameInstance;
         [SerializeField] private WorldConfig worldConfigObject;
 
         [RuntimeInitializeOnLoadMethod]
@@ -26,7 +27,7 @@ namespace Majingari.Framework
                 if(obj.classGameInstance == null)
                     Debug.LogError("You don't have Game Instance, please attach Game Instance first");
 
-                var gameInstance = Activator.CreateInstance(obj.classGameInstance.GetClass()) as GameInstance;
+                var gameInstance = Activator.CreateInstance(obj.classGameInstance.GetType()) as GameInstance;
                 ServiceLocator.Register<GameInstance>(gameInstance);
             }
             else {
@@ -34,11 +35,40 @@ namespace Majingari.Framework
             }
         }
 
-        private void OnValidate() {
-            if (classGameInstance.GetClass().BaseType != typeof(GameInstance)) {
-                Debug.LogError("This Is Not Game Instance, please attach game instance");
-                classGameInstance = null;
+#if UNITY_EDITOR
+        [InitializeOnLoadMethod]
+        private static void OnEditorLoad() {
+            var obj = Resources.FindObjectsOfTypeAll<GameWorldSettings>();
+
+            if (obj.Length > 1) {
+                Debug.LogError("WARNING : You have duplicated GameWorldSettings");
+                return;
+            }
+
+            if (obj.Length == 0) {
+                CreateGameWorldAsset();
+            }
+
+        }
+
+        [MenuItem("Game Word Settings/Get World Settings")]
+        public static void GetTheInstance() {
+            var obj = Resources.FindObjectsOfTypeAll<GameWorldSettings>();
+
+            if (obj.Length > 0) {
+                Selection.activeObject = obj[0];
+            }
+            else {
+                CreateGameWorldAsset();
             }
         }
+
+        private static void CreateGameWorldAsset() {
+            var asset = ScriptableObject.CreateInstance<GameWorldSettings>();
+            Selection.activeObject = asset;
+            AssetDatabase.CreateAsset(asset, "Assets/GameWorldSettings.asset");
+            AssetDatabase.SaveAssets();
+        }
+#endif
     }
 }
