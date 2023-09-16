@@ -22,11 +22,11 @@ namespace Majingari.Framework
             if (objs.Length > 0) {
                 var obj = objs[0];
 
+                if (obj.worldConfigObject == null) {
+                    Debug.LogError("You don't have World Config, please attach World Config first");
+                }
+
                 obj.worldConfigObject.SetupMapConfigList();
-
-                if(obj.classGameInstance == null)
-                    Debug.LogError("You don't have Game Instance, please attach Game Instance first");
-
                 var gameInstance = Activator.CreateInstance(obj.classGameInstance.GetType()) as GameInstance;
                 ServiceLocator.Register<GameInstance>(gameInstance);
             }
