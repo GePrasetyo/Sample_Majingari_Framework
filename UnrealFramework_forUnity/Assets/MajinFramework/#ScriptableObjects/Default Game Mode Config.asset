@@ -17,4 +17,4 @@ MonoBehaviour:
   _inputManager: {fileID: 453959139162741945, guid: dfcf74f5529752645b5f9db3f3c65ffd, type: 3}
   _playerController: {fileID: 2282816133777719292, guid: d6fd03ab4b0e2574a853e94711d0493b, type: 3}
   _playerState: {fileID: 142251523115035384, guid: e91f9caa2b2781245be57cf2beef36bc, type: 3}
-  _playerPawn: {fileID: 7131696031258706682, guid: 7494d858949cf8c478c757c332a3edda, type: 3}
+  _playerPawn: {fileID: 4619872396130258318, guid: 14c6a5ef1b126c14d8c830b2fb0024b9, type: 3}

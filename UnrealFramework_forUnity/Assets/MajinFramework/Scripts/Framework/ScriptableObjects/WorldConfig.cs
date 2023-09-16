@@ -1,33 +1,57 @@
-using UnityEngine;
-using UnityEditor;
 using System;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine;
 
-namespace Majingari.Framework.World
-{
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+namespace Majingari.Framework.World {
     [CreateAssetMenu(fileName = "Default World Config", menuName = "Config Object/World Config")]
-    public class WorldConfig : ScriptableObject
-    {
+    public class WorldConfig : ScriptableObject {
+        [SerializeField] private bool playFromStart;
+#if UNITY_EDITOR
+        [SerializeField] private SceneAsset startMap;
+#endif
+        private string startMapName;
+        
         [SerializeField] private WorldConfigList[] mapList;
-        public Dictionary<SceneAsset, GameModeManager> MapConfigList = new Dictionary<SceneAsset, GameModeManager>();
+        public Dictionary<string, WorldConfigList> MapConfigList = new Dictionary<string, WorldConfigList>();
 
         public void SetupMapConfigList() {
             MapConfigList.Clear();
 
-            Debug.Log("Setup Map Config");
-
             if (mapList.Length == 0)
                 return;
 
-            for (int x = 0; x < mapList.Length; x++) {
-                MapConfigList.Add(mapList[x].Map, mapList[x].TheGameMode);
+            for (int i = 0; i < mapList.Length; i++) {
+                MapConfigList[mapList[i].mapName] = mapList[i];
+            }
+
+            if (!playFromStart)
+                return;
+
+            SceneManager.LoadScene(startMapName);
+        }
+
+#if UNITY_EDITOR
+        private void OnValidate() {
+            startMapName = startMap == null ? "":startMap.name;
+
+            for (int i = 0; i < mapList.Length; i++) {
+                mapList[i].mapName = mapList[i].Map == null ? "" : mapList[i].Map.name;
             }
         }
+#endif
     }
 
     [Serializable]
     public struct WorldConfigList {
+#if UNITY_EDITOR
         public SceneAsset Map;
+#endif
+        [HideInInspector] public string mapName;
         public GameModeManager TheGameMode;
     }
 }

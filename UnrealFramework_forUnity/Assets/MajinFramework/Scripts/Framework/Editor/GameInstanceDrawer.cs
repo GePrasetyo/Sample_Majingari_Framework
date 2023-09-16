@@ -11,8 +11,6 @@ namespace Majingari.Framework {
         private Rect dropDownRect;
         private Rect eventRect;
 
-        private static GameWorldSettings worldSetting;
-        
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
             dropDownRect = position;
             dropDownRect.height = EditorGUIUtility.singleLineHeight;

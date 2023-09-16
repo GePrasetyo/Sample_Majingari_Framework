@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488873c7e14e6d740850d05a4313c29f, type: 3}
   m_Name: World Config
   m_EditorClassIdentifier: 
+  playFromStart: 1
+  startMap: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
   mapList:
   - Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    mapName: SampleScene
     TheGameMode: {fileID: 11400000, guid: 81d5df29ba92c274f89eaeebfcf590cc, type: 2}
