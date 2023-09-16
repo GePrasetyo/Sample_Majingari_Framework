@@ -12,23 +12,21 @@ namespace Majingari.Framework {
 
         [RuntimeInitializeOnLoadMethod]
         private static void WorldBuilderStart() {
-            var objs = Resources.FindObjectsOfTypeAll<GameWorldSettings>();
+            var obj = Resources.Load<GameWorldSettings>(nameof(GameWorldSettings));
 
-            if (objs.Length > 0) {
-                var obj = objs[0];
-
-                if (obj.worldConfigObject == null) {
-                    Debug.LogError("You don't have World Config, please attach World Config first");
-                    return;
-                }
-
-                ServiceLocator.Register<GameInstance>(obj.classGameInstance);
-                obj.classGameInstance.Construct(obj.worldConfigObject);
-                obj.worldConfigObject.SetupMapConfigList();
-            }
-            else {
+            if(obj == null) {
                 Debug.LogError("You don't have world settings, please create the world setting first");
+                return;
             }
+
+            if (obj.worldConfigObject == null) {
+                Debug.LogError("You don't have World Config, please attach World Config first");
+                return;
+            }
+
+            ServiceLocator.Register<GameInstance>(obj.classGameInstance);
+            obj.classGameInstance.Construct(obj.worldConfigObject);
+            obj.worldConfigObject.SetupMapConfigList();
         }
 
 #if UNITY_EDITOR
@@ -45,10 +43,10 @@ namespace Majingari.Framework {
 
         [MenuItem("Game Word Settings/Get World Settings")]
         public static void GetTheInstance() {
-            var obj = Resources.FindObjectsOfTypeAll<GameWorldSettings>();
+            var obj = Resources.Load<GameWorldSettings>(nameof(GameWorldSettings));
 
-            if (obj.Length > 0) {
-                Selection.activeObject = obj[0];
+            if (obj != null) {
+                Selection.activeObject = obj;
             }
             else {
                 CreateGameWorldAsset();
@@ -57,17 +55,16 @@ namespace Majingari.Framework {
 
         private static void CreateGameWorldAsset() {
             Debug.LogError("GameWorldSettings Created");
+            string resourcesPath = "Assets/Resources";
             var asset = ScriptableObject.CreateInstance<GameWorldSettings>();
-            var resourcesPath = "Assets/Resources";
 
             if (!AssetDatabase.IsValidFolder(resourcesPath)) {
                 AssetDatabase.CreateFolder("Assets", "Resources");
             }
 
-            var assetPath = resourcesPath + "/GameWorldSettings.asset";
+            string assetPath = resourcesPath + "/GameWorldSettings.asset";
             AssetDatabase.CreateAsset(asset, assetPath);
             AssetDatabase.SaveAssets();
-            
             Selection.activeObject = asset;
         }
 #endif

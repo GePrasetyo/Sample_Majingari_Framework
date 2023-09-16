@@ -16,7 +16,7 @@ namespace Majingari.Framework.World {
 #endif
         private string startMapName;
         
-        [SerializeField] private WorldConfigList[] mapList;
+        [SerializeField] private WorldConfigList[] mapList = new WorldConfigList[0];
         public Dictionary<string, WorldConfigList> MapConfigList = new Dictionary<string, WorldConfigList>();
 
         public void SetupMapConfigList() {
@@ -37,11 +37,13 @@ namespace Majingari.Framework.World {
 
 #if UNITY_EDITOR
         private void OnValidate() {
-            startMapName = startMap == null ? "":startMap.name;
+            startMapName = startMap == null ? "" : startMap.name;
 
             for (int i = 0; i < mapList.Length; i++) {
                 mapList[i].mapName = mapList[i].Map == null ? "" : mapList[i].Map.name;
             }
+
+            //EditorUtility.SetDirty(this);
         }
 #endif
     }

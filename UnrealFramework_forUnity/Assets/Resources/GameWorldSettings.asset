@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: GameWorldSettings
   m_EditorClassIdentifier: 
   classGameInstance:
-    rid: 2912648466617597960
+    rid: 2912648466617597964
   worldConfigObject: {fileID: 11400000, guid: 69cecbddae73c1c47a5ef9e30ad13ce1, type: 2}
   references:
     version: 2
     RefIds:
-    - rid: 2912648466617597960
-      type: {class: GameInstance, ns: Majingari.Framework, asm: Assembly-CSharp}
+    - rid: 2912648466617597964
+      type: {class: PersistentGameInstance, ns: , asm: Assembly-CSharp}
