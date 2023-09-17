@@ -9,13 +9,13 @@ namespace Majingari.Framework {
         private Type[] types;
         private string[] typeNames;
         private Rect dropDownRect;
-        private Rect eventRect;
+        private Rect fieldRect;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
             dropDownRect = position;
             dropDownRect.height = EditorGUIUtility.singleLineHeight;
-            eventRect = position;
-            eventRect.height = position.height - EditorGUIUtility.singleLineHeight;
+            fieldRect = position;
+            fieldRect.height = position.height - EditorGUIUtility.singleLineHeight;
 
             EditorGUI.BeginProperty(position, label, property);
             if (types == null) {
@@ -42,12 +42,12 @@ namespace Majingari.Framework {
                 property.serializedObject.ApplyModifiedProperties();
             }
 
-            EditorGUI.PropertyField(eventRect, property, label, true);
+            EditorGUI.PropertyField(fieldRect, property, label, true);
             EditorGUI.EndProperty();
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
-            return EditorGUI.GetPropertyHeight(property) + EditorGUIUtility.singleLineHeight;
+            return EditorGUI.GetPropertyHeight(property);
         }
     }
 }

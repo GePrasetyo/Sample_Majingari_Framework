@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: GameWorldSettings
   m_EditorClassIdentifier: 
   classGameInstance:
-    rid: 2912648466617597964
+    rid: 2912648466617597967
   worldConfigObject: {fileID: 11400000, guid: 69cecbddae73c1c47a5ef9e30ad13ce1, type: 2}
+  playFromStart: 1
+  startMap:
+    Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    mapName: SampleScene
+    TheGameMode: {fileID: 11400000, guid: 81d5df29ba92c274f89eaeebfcf590cc, type: 2}
   references:
     version: 2
     RefIds:
-    - rid: 2912648466617597964
+    - rid: 2912648466617597967
       type: {class: PersistentGameInstance, ns: , asm: Assembly-CSharp}
+      data:
+        GIName: 

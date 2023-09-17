@@ -1,5 +1,6 @@
 using UnityEngine;
 using Majingari.Framework.World;
+using UnityEngine.SceneManagement;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -9,6 +10,10 @@ namespace Majingari.Framework {
     public sealed class GameWorldSettings : ScriptableObject {
         [SerializeReference] public GameInstance classGameInstance;
         [SerializeField] private WorldConfig worldConfigObject;
+
+        [Header("Player Setting")]
+        [SerializeField] private bool playFromStart;
+        [SerializeField] private WorldAssetConfig startMap;
 
         [RuntimeInitializeOnLoadMethod]
         private static void WorldBuilderStart() {
@@ -27,6 +32,11 @@ namespace Majingari.Framework {
             ServiceLocator.Register<GameInstance>(obj.classGameInstance);
             obj.classGameInstance.Construct(obj.worldConfigObject);
             obj.worldConfigObject.SetupMapConfigList();
+
+            if (!obj.playFromStart)
+                return;
+
+            SceneManager.LoadScene(obj.startMap.mapName);
         }
 
 #if UNITY_EDITOR
