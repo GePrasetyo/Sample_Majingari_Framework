@@ -31,6 +31,7 @@ namespace Majingari.Framework {
 
             ServiceLocator.Register<GameInstance>(obj.classGameInstance);
             obj.classGameInstance.Construct(obj.worldConfigObject);
+            obj.classGameInstance.Start();
             obj.worldConfigObject.SetupMapConfigList();
 
             if (!obj.playFromStart)

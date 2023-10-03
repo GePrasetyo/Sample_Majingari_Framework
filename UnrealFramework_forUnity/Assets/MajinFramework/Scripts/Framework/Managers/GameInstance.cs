@@ -18,7 +18,6 @@ namespace Majingari.Framework {
             worldSetting = _worldSetting;
         }
 
-
         protected void OnActiveSceneChanged(Scene prevScene, Scene nextScene) {
 
         }
@@ -32,6 +31,14 @@ namespace Majingari.Framework {
                 worldSetting.MapConfigList[scene.name].TheGameMode.InitiateGameManager();
                 worldSetting.MapConfigList[scene.name].TheGameMode.InstantiatePlayer();
             }
+        }
+
+        internal virtual void Start() {
+            ServiceLocator.Resolve<TickSignal>().RegisterObject(Tick);
+        }
+
+        protected virtual void Tick() {
+
         }
     }
 }
