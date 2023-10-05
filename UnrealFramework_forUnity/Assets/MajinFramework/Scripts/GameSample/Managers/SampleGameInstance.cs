@@ -1,4 +1,6 @@
+using Majingari.Framework.World;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Majingari.Framework {
     public class SampleGameInstance : GameInstance {
@@ -8,14 +10,6 @@ namespace Majingari.Framework {
 
         protected override void Tick() {
             base.Tick();
-
-            //if (Input.GetKeyDown(KeyCode.A)) {
-            //    ServiceLocator.Resolve<TickSignal>().RegisterObject(AAAAAAAAAAA);
-            //}
-
-            //if (Input.GetKeyDown(KeyCode.B)) {
-            //    ServiceLocator.Resolve<TickSignal>().UnRegisterObject(AAAAAAAAAAA);
-            //}
         }
     }
 }

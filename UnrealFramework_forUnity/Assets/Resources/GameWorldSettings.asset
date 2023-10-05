@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameWorldSettings
   m_EditorClassIdentifier: 
   classGameInstance:
-    rid: 2088401479376044032
+    rid: 2088401521644929025
   worldConfigObject: {fileID: 11400000, guid: 69cecbddae73c1c47a5ef9e30ad13ce1, type: 2}
   playFromStart: 1
   startMap:
@@ -23,5 +23,21 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 2088401479376044032
+    - rid: 2088401521644929025
       type: {class: SampleGameInstance, ns: Majingari.Framework, asm: Assembly-CSharp}
+      data:
+        A:
+          m_AssetGUID: 0ff3a03f82d093d449b261cc51af3edf
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        B:
+          m_AssetGUID: b0284914ed6d29f4a9b2757899d7684b
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
+        C:
+          m_AssetGUID: dcc85c7ca445d3d498dad44270d477d1
+          m_SubObjectName: 
+          m_SubObjectType: 
+          m_EditorAssetChanged: 0
