@@ -20,6 +20,7 @@ namespace Majingari.Framework {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
         private static void InitService() {
             var obj = new GameObject().AddComponent<TickSignal>();
+            obj.name = "[Service] Tick Signal";
             DontDestroyOnLoad(obj);
             ServiceLocator.Register<TickSignal>(obj);
         }
