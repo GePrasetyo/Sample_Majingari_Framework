@@ -15,7 +15,8 @@ namespace Majingari.Framework {
             dropDownRect = position;
             dropDownRect.height = EditorGUIUtility.singleLineHeight;
             fieldRect = position;
-            fieldRect.height = position.height - EditorGUIUtility.singleLineHeight;
+            fieldRect.y += EditorGUIUtility.singleLineHeight;
+            fieldRect.height = position.height + EditorGUIUtility.singleLineHeight;
 
             EditorGUI.BeginProperty(position, label, property);
             if (types == null) {
@@ -47,7 +48,7 @@ namespace Majingari.Framework {
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
-            return EditorGUI.GetPropertyHeight(property);
+            return EditorGUI.GetPropertyHeight(property) + EditorGUIUtility.singleLineHeight;
         }
     }
 }
