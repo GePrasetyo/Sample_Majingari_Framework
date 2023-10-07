@@ -7,29 +7,31 @@ using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 
 namespace Majingari.Network {
-#if NETCODE_EXTENSION
     [RequireComponent(typeof(NetworkManager))]
     public class ConnectionHandler : NetworkDiscovery<DiscoveryBroadcastData, DiscoveryResponseData> {
         public static event Action ConnectionEstablished;
         public static event Action ConnectionShutdown;
-        private NetworkManager netManager;
+        private NetworkManager networkManager;
         public static event Action<IPEndPoint, DiscoveryResponseData> OnServerFound;
 
         void Awake() {
-            netManager = GetComponent<NetworkManager>();
-            netManager.OnServerStarted += OnServerStart;
-            netManager.OnClientConnectedCallback += ClientNetworkReadyWrapper;
-            netManager.OnClientDisconnectCallback += OnClientDisconnected;
+            if (networkManager == null) {
+                networkManager = GetComponent<NetworkManager>();
+            }
+
+            networkManager.OnServerStarted += OnServerStart;
+            networkManager.OnClientConnectedCallback += ClientNetworkReadyWrapper;
+            networkManager.OnClientDisconnectCallback += OnClientDisconnected;
         }
 
         void OnDestroy() {
-            netManager.OnServerStarted -= OnServerStart;
-            netManager.OnClientConnectedCallback -= ClientNetworkReadyWrapper;
-            netManager.OnClientDisconnectCallback -= OnClientDisconnected;
+            networkManager.OnServerStarted -= OnServerStart;
+            networkManager.OnClientConnectedCallback -= ClientNetworkReadyWrapper;
+            networkManager.OnClientDisconnectCallback -= OnClientDisconnected;
         }
 
         private void OnClientDisconnected(ulong clientId) {
-            if (clientId == netManager.LocalClientId) {
+            if (clientId == networkManager.LocalClientId) {
                 Debug.Log("I'm disconnected");
                 ConnectionShutdown?.Invoke();
                 StopDiscovery();
@@ -45,22 +47,21 @@ namespace Majingari.Network {
         }
 
         private void ClientNetworkReadyWrapper(ulong clientId) {
-            if (netManager.IsServer)
+            if (networkManager.IsServer)
                 return;
 
-            if (clientId == netManager.LocalClientId) {
+            if (clientId == networkManager.LocalClientId) {
                 Debug.Log("I'm(client) success connect to Server");
                 ConnectionEstablished?.Invoke();
             }
         }
 
         protected override bool ProcessBroadcast(IPEndPoint sender, DiscoveryBroadcastData broadCast, out DiscoveryResponseData response) {
-
             Debug.Log($"Broadcast my Session {sender.Address} -- {sender.Port}");
             var sessionProp = ServiceLocator.Resolve<SessionState>();
             response = new DiscoveryResponseData() {
-                ServerName = sessionProp.sessionName,
-                Port = ((UnityTransport)netManager.NetworkConfig.NetworkTransport).ConnectionData.Port,
+                serverName = sessionProp.sessionName,
+                port = ((UnityTransport)networkManager.NetworkConfig.NetworkTransport).ConnectionData.Port,
             };
             return true;
         }
@@ -69,20 +70,4 @@ namespace Majingari.Network {
             OnServerFound?.Invoke(sender, response);
         }
     }
-#else
-public class ConnectionHandler : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
-#endif
 }
