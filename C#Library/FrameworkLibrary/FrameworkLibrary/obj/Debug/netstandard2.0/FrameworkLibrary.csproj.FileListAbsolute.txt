@@ -6,3 +6,13 @@ D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\ne
 D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.csproj.CoreCompileInputs.cache
 D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.dll
 D:\Anbu\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.pdb
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\bin\Debug\netstandard2.0\FrameworkLibrary.deps.json
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\bin\Debug\netstandard2.0\FrameworkLibrary.dll
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\bin\Debug\netstandard2.0\FrameworkLibrary.pdb
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.csproj.AssemblyReference.cache
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.AssemblyInfoInputs.cache
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.AssemblyInfo.cs
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.csproj.CoreCompileInputs.cache
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.dll
+D:\[ALL PROJECTS]\MAJINGARI_PROJECT\UnrealFramework\C#Library\FrameworkLibrary\FrameworkLibrary\obj\Debug\netstandard2.0\FrameworkLibrary.pdb
