@@ -1,19 +1,16 @@
 using UnityEngine;
-using Majingari.Framework.World;
-using UnityEngine.SceneManagement;
 
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-namespace Majingari.Framework {
-    public sealed class GameWorldSettings : ScriptableObject {
+namespace Majingari.Framework.World {
+    internal sealed class GameWorldSettings : ScriptableObject {
         [SerializeReference] public GameInstance classGameInstance;
         [SerializeField] private WorldConfig worldConfigObject;
 
         [Header("Player Setting")]
-        [SerializeField] private bool playFromStart;
-        [SerializeField] private WorldAssetConfig startMap;
+        [SerializeField] private bool editMode;
 
         [RuntimeInitializeOnLoadMethod]
         private static void WorldBuilderStart() {
@@ -24,20 +21,19 @@ namespace Majingari.Framework {
                 return;
             }
 
+            if (obj.editMode) {
+                return;
+            }
+
             if (obj.worldConfigObject == null) {
                 Debug.LogError("You don't have World Config, please attach World Config first");
                 return;
             }
 
-            ServiceLocator.Register<GameInstance>(obj.classGameInstance);
-            obj.classGameInstance.Construct(obj.worldConfigObject);
-            obj.classGameInstance.Start();
             obj.worldConfigObject.SetupDictionary();
 
-            if (!obj.playFromStart)
-                return;
-
-            SceneManager.LoadScene(obj.startMap.mapName);
+            ServiceLocator.Register<GameInstance>(obj.classGameInstance);
+            obj.classGameInstance.Construct(obj.worldConfigObject);
         }
 
 #if UNITY_EDITOR
