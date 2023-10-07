@@ -1,4 +1,4 @@
-# UnrealFramework-forUnity
+# Sample_Majingari_Framework
 Adapting Unreal Framework to Unity
 
 The architecture that mimic Unreal framework structure

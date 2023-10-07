@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488873c7e14e6d740850d05a4313c29f, type: 3}
-  m_Name: World Config
+  m_Script: {fileID: 11500000, guid: 3fc71d2dd54e4894c8d69b075fd66b63, type: 3}
+  m_Name: Default World Config
   m_EditorClassIdentifier: 
   mapList:
   - Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}

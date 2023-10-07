@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-614295797303057699
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef6bbfcfaa136b42a77c05217a727b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map:
+    Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    mapName: SampleScene
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -35,7 +50,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 5706257780853578051}
   m_StateMachineBehaviours:
-  - {fileID: 6791549725082624534}
+  - {fileID: -614295797303057699}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -110,9 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bf77a9299cc9945af100bd8a199443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map:
-    Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    mapName: SampleScene
+  map: {Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}, mapName: SampleScene}
 --- !u!1107 &8657087798117907628
 AnimatorStateMachine:
   serializedVersion: 6
