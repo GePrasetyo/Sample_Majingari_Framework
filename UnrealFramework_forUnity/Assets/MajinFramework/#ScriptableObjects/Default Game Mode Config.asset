@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a26b7d373f783054bb690fdfa9f23016, type: 3}
+  m_Script: {fileID: 11500000, guid: a9900589bcb8e384cbe512dd4fe701d4, type: 3}
   m_Name: Default Game Mode Config
   m_EditorClassIdentifier: 
-  _gameState: {fileID: 675310826120872959, guid: 8060c0ab57dd94841b0a1bd2618772fa, type: 3}
-  _hudManager: {fileID: 5053455312811159473, guid: feb06f03f8be7d147a9f258dea86c73c, type: 3}
-  _inputManager: {fileID: 453959139162741945, guid: dfcf74f5529752645b5f9db3f3c65ffd, type: 3}
-  _playerController: {fileID: 2282816133777719292, guid: d6fd03ab4b0e2574a853e94711d0493b, type: 3}
-  _playerState: {fileID: 142251523115035384, guid: e91f9caa2b2781245be57cf2beef36bc, type: 3}
-  _playerPawn: {fileID: 4619872396130258318, guid: 14c6a5ef1b126c14d8c830b2fb0024b9, type: 3}
+  _gameState: {fileID: 7904727573946660109, guid: 8060c0ab57dd94841b0a1bd2618772fa, type: 3}
+  _hudManager: {fileID: 4699055174348396330, guid: feb06f03f8be7d147a9f258dea86c73c, type: 3}
+  _inputManager: {fileID: 1820960732944318183, guid: dfcf74f5529752645b5f9db3f3c65ffd, type: 3}
+  _playerController: {fileID: 3315377530672962427, guid: d6fd03ab4b0e2574a853e94711d0493b, type: 3}
+  _playerState: {fileID: 2515315866711433812, guid: e91f9caa2b2781245be57cf2beef36bc, type: 3}
+  _playerPawn: {fileID: 5226061478892813569, guid: 14c6a5ef1b126c14d8c830b2fb0024b9, type: 3}

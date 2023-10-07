@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aaa58e31dd2c424e947536a3597f57a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9662db6688ec707408fe045371dc805f, type: 3}
   m_Name: GameWorldSettings
   m_EditorClassIdentifier: 
   classGameInstance:
-    rid: 2088401521644929025
-  worldConfigObject: {fileID: 11400000, guid: 69cecbddae73c1c47a5ef9e30ad13ce1, type: 2}
+    rid: 2088401569819394051
+  worldConfigObject: {fileID: 11400000, guid: db8dd842114635b4db1e4a82cc85e875, type: 2}
   editMode: 0
   references:
     version: 2
     RefIds:
-    - rid: 2088401521644929025
-      type: {class: SampleGameInstance, ns: Majingari.Framework, asm: Assembly-CSharp}
+    - rid: 2088401569819394051
+      type: {class: PersistentGameInstance, ns: , asm: M_Framework}
       data:
         gameStateMachine: {fileID: 9100000, guid: 218cae19280128c439eb1c1b1f041553, type: 2}
+        GIName: G

@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.majingari.framework": {
+      "version": "file:D:/[ALL PROJECTS]/MAJINGARI_PROJECT/Majingari_Framework",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.addressables": "1.21.17",
+        "com.unity.multiplayer.tools": "1.0.0",
+        "com.unity.netcode.gameobjects": "1.6.0"
+      }
+    },
     "com.unity.addressables": {
       "version": "1.21.17",
       "depth": 0,
