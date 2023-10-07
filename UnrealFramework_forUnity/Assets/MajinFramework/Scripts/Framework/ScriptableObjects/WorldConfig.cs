@@ -48,6 +48,14 @@ namespace Majingari.Framework.World {
     }
 
     [Serializable]
+    public class SceneReference {
+#if UNITY_EDITOR
+        public SceneAsset Map;
+#endif
+        public string mapName;
+    }
+
+    [Serializable]
     public class AddressableSceneHandler {
         public string sceneName;
         public AssetReference sceneAddressable;

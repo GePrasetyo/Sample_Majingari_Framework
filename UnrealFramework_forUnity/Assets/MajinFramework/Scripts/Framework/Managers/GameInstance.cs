@@ -1,12 +1,16 @@
 using Majingari.Framework.World;
+
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Majingari.Framework {
     [Serializable]
     public class GameInstance {
         protected WorldConfig worldSetting;
+        [SerializeField] protected RuntimeAnimatorController gameStateMachine;
+
         public GameInstance() {
             Debug.Log($"Game Instance generated : {this.GetType()}");
 
@@ -16,6 +20,13 @@ namespace Majingari.Framework {
 
         public void Construct(WorldConfig _worldSetting) {
             worldSetting = _worldSetting;
+
+            var fsm = new GameObject().AddComponent<Animator>();
+            fsm.name = "[Service] State Machine";
+            fsm.runtimeAnimatorController = gameStateMachine;
+            Object.DontDestroyOnLoad(fsm);
+
+            Start();
         }
 
         protected void OnActiveSceneChanged(Scene prevScene, Scene nextScene) {
@@ -33,7 +44,7 @@ namespace Majingari.Framework {
             }
         }
 
-        internal virtual void Start() {
+        protected virtual void Start() {
             ServiceLocator.Resolve<TickSignal>().RegisterObject(Tick);
         }
 

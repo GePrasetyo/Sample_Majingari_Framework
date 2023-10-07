@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Majingari.Framework.World
-{
-    public class GameState : MonoBehaviour
-    {
-       
+namespace Majingari.Framework.World {
+    public class GameState : MonoBehaviour {
+        private void Start() {
+            ServiceLocator.Register<GameState>(this);
+        }
     }
 
 }
