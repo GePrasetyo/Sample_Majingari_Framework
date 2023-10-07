@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9024418594060126695}
   - component: {fileID: 4631494353527904407}
-  - component: {fileID: 9010659824595638377}
   - component: {fileID: 5053165916160740691}
+  - component: {fileID: 6355596578222689274}
   m_Layer: 0
   m_Name: ConnectionHandler
   m_TagString: Untagged
@@ -49,7 +49,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 5053165916160740691}
-    PlayerPrefab: {fileID: 0}
+    PlayerPrefab: {fileID: 7448545411124753804, guid: 911fbd2a666f9884da5043c8f37157b8, type: 3}
     Prefabs:
       NetworkPrefabsLists: []
     TickRate: 30
@@ -70,20 +70,6 @@ MonoBehaviour:
     OldPrefabList: []
   RunInBackground: 1
   LogLevel: 1
---- !u!114 &9010659824595638377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5524477116348764782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f298755959d43da4b96472bc8050d616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  port: 47777
-  uniqueApplicationId: -3540270807736595101
 --- !u!114 &5053165916160740691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +97,17 @@ MonoBehaviour:
     PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
+--- !u!114 &6355596578222689274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524477116348764782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cfe06c420535964fa36536338d510e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  port: 47777
+  uniqueApplicationId: 8517421325293686093
