@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using Majingari.Network;
 using UnityEngine;
 
-public class NetworkGameInstance : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+namespace Majingari.Framework {
+    public class NetworkGameInstance : GameInstance {
+        protected override void Start() {
+            base.Start();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void Tick() {
+            base.Tick();
+
+            if (Input.GetKeyDown(KeyCode.S)) {
+                ServiceLocator.Resolve<ConnectionHandler>()?.StartGameSesssionHost();
+            }
+
+            if (Input.GetKeyDown(KeyCode.J)) {
+                ServiceLocator.Resolve<ConnectionHandler>()?.AutoJoinLocalSession();
+            }
+        }
     }
 }
