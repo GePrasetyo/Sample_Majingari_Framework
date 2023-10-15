@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-614295797303057699
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fef6bbfcfaa136b42a77c05217a727b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map:
-    Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    mapName: SampleScene
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -50,7 +35,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 5706257780853578051}
   m_StateMachineBehaviours:
-  - {fileID: -614295797303057699}
+  - {fileID: 8782777909538610620}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -151,3 +136,19 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1582964705302120693}
+--- !u!114 &8782777909538610620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09a7631e81035d44b86886701869246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map:
+    Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    mapName: SampleScene
+  connectionPrefab: {fileID: 6355596578222689274, guid: a939bf622e174c0458f1c4c7f19b85da, type: 3}
