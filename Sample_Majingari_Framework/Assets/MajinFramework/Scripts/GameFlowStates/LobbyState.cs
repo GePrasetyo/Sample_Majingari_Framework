@@ -19,7 +19,7 @@ namespace Majingari.FSM {
 
             var handler = Instantiate(connectionPrefab);
             handler.name = "[Service] Connection Handler";
-            DontDestroyOnLoad(handler);
+            DontDestroyOnLoad(handler.gameObject);
             ServiceLocator.Register<ConnectionHandler>(handler);
         }
     }
