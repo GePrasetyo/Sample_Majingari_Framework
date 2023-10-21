@@ -51,7 +51,8 @@ MonoBehaviour:
     NetworkTransport: {fileID: 5053165916160740691}
     PlayerPrefab: {fileID: 7448545411124753804, guid: 911fbd2a666f9884da5043c8f37157b8, type: 3}
     Prefabs:
-      NetworkPrefabsLists: []
+      NetworkPrefabsLists:
+      - {fileID: 11400000, guid: 01a8cf77ee1901b4d84020a60d62c85e, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -69,7 +70,7 @@ MonoBehaviour:
     EnableNetworkLogs: 1
     OldPrefabList: []
   RunInBackground: 1
-  LogLevel: 1
+  LogLevel: 0
 --- !u!114 &5053165916160740691
 MonoBehaviour:
   m_ObjectHideFlags: 0
