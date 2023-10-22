@@ -11,11 +11,11 @@ namespace Majingari.Framework {
             base.Tick();
 
             if (Input.GetKeyDown(KeyCode.H)) {
-                ServiceLocator.Resolve<ConnectionHandler>()?.StartGameSesssionHost();
+                ServiceLocator.Resolve<ConnectionLANSupport>()?.StartLocalSesssionHost();
             }
 
             if (Input.GetKeyDown(KeyCode.S)) {
-                ServiceLocator.Resolve<ConnectionHandler>()?.AutoJoinLocalSession();
+                ServiceLocator.Resolve<ConnectionLANSupport>()?.AutoJoinLocalSession();
             }
 
             if (Input.GetKeyDown(KeyCode.J)) {
