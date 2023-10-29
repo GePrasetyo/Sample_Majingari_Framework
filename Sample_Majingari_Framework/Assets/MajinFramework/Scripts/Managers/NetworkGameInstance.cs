@@ -10,16 +10,27 @@ namespace Majingari.Framework {
         protected override void Tick() {
             base.Tick();
 
-            if (Input.GetKeyDown(KeyCode.H)) {
-                ServiceLocator.Resolve<ConnectionLANSupport>()?.StartLocalSesssionHost();
+
+            if (Input.GetKey(KeyCode.LeftShift)){
+                if (Input.GetKeyDown(KeyCode.H)) {
+                    ServiceLocator.Resolve<ConnectionLANSupport>()?.StartLocalSesssionHost();
+                    return;
+                }
+
+                if (Input.GetKeyDown(KeyCode.S)) {
+                    ServiceLocator.Resolve<ConnectionLANSupport>()?.AutoJoinLocalSession();
+                    return;
+                }
             }
 
-            if (Input.GetKeyDown(KeyCode.S)) {
-                ServiceLocator.Resolve<ConnectionLANSupport>()?.AutoJoinLocalSession();
+            if (Input.GetKeyDown(KeyCode.H)) {
+                ServiceLocator.Resolve<UNetcodeConnectionHandler>()?.StartGameSessionHost();
+                return;
             }
 
             if (Input.GetKeyDown(KeyCode.J)) {
-                ServiceLocator.Resolve<ConnectionHandler>()?.StartGameSesssionClient();
+                ServiceLocator.Resolve<UNetcodeConnectionHandler>()?.StartGameSesssionClient();
+                return;
             }
         }
     }

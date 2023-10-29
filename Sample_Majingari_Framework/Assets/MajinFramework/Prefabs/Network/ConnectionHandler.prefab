@@ -110,5 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cfe06c420535964fa36536338d510e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: 47777
-  uniqueApplicationId: 8517421325293686093
+  lanSupport: 1
