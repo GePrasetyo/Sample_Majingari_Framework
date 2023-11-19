@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/MajinFramework/UI%20Toolkit/TestButton_Hover.uss?fileID=7433441132597879392&amp;guid=5e80cfbda7fd16649acfb20d4f639902&amp;type=3#TestButton_Hover" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LabelA" style="position: relative; height: 24px; width: 63px;" />
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonAaaaa" class="TestButton" style="height: 73px; width: 150px;" />
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonCcccc" style="height: 73px; width: 150px; transition-property: all; transition-duration: 0s; transition-timing-function: ease; transition-delay: 0s;" />
+    </ui:VisualElement>
+</ui:UXML>
