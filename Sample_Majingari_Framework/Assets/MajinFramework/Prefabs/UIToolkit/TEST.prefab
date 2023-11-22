@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 59ef27b4c5c61c941ba1952231c47e7f, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 6d9b96a515f5e0e41a5e135b971d4fb3, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 625c2aafad1735e498b06c491f272c5f, type: 3}
   m_SortingOrder: 0
 --- !u!114 &6425159577478930503
 MonoBehaviour:
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sample:
     uiDocument: {fileID: 7533147478579491188}
-    testButton: ButtonAaaaa
-    testButtonA: ButtonCcccc
-    testProgress: ButtonAaaaa
+    testButton: ButtonA
+    testButtonA: ButtonB
+    testProgress: ButtonC
   aaa: 
