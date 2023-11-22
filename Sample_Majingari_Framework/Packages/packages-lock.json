@@ -9,6 +9,12 @@
         "com.unity.netcode.gameobjects": "1.6.0"
       }
     },
+    "com.majingari.ui": {
+      "version": "file:C:/Majingari/Projects/Majingari-UI-framework",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.addressables": {
       "version": "1.21.19",
       "depth": 0,

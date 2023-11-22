@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.majingari.framework": "file:C:/Majingari/Projects/Majingari_Framework",
+    "com.majingari.ui": "file:C:/Majingari/Projects/Majingari-UI-framework",
     "com.unity.addressables": "1.21.19",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.burst": "1.8.10",
