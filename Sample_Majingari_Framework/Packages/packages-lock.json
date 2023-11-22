@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.majingari.framework": {
-      "version": "file:D:/[ALL PROJECTS]/MAJINGARI_PROJECT/Majingari_Framework",
+      "version": "file:C:/Majingari/Projects/Majingari_Framework",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -10,17 +10,17 @@
       }
     },
     "com.majingari.ui": {
-      "version": "file:D:/[ALL PROJECTS]/MAJINGARI_PROJECT/Unity-UI-framework",
+      "version": "file:C:/Majingari/Projects/Majingari-UI-framework",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.unity.addressables": {
-      "version": "1.21.18",
+      "version": "1.21.19",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.20",
+        "com.unity.scriptablebuildpipeline": "1.21.21",
         "com.unity.modules.assetbundle": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
@@ -30,7 +30,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ai.navigation": {
-      "version": "1.1.4",
+      "version": "1.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -39,7 +39,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.8",
+      "version": "1.8.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -65,7 +65,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.24",
+      "version": "3.0.26",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -74,7 +74,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.18",
+      "version": "2.0.22",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -106,12 +106,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.netcode.gameobjects": {
-      "version": "1.6.0",
+      "version": "1.7.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.nuget.mono-cecil": "1.10.1",
-        "com.unity.transport": "1.3.4"
+        "com.unity.transport": "1.4.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -123,7 +123,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.20",
+      "version": "1.21.21",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -141,7 +141,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.7.5",
+      "version": "1.7.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -153,7 +153,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.transport": {
-      "version": "1.3.4",
+      "version": "1.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
