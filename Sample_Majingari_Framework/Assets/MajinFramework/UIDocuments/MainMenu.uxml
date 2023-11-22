@@ -11,5 +11,6 @@
         <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonB" style="height: 73px; width: 150px;" />
         <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonC" style="height: 73px; width: 150px; transition-property: all; transition-duration: 0s; transition-timing-function: ease; transition-delay: 0s;" />
         <ui:ProgressBar value="22.8" title="my-progress" name="ProgressBar" />
+        <ui:VisualElement name="Flag" style="flex-grow: 1; height: 103px; position: absolute; width: 154px; top: 17px; left: 188px; background-image: url(&apos;project://database/Assets/MajinFramework/Art/Sprites/UK.png?fileID=21300000&amp;guid=cef36f02caef74841b67ee564ac09766&amp;type=3#UK&apos;);" />
     </ui:VisualElement>
 </ui:UXML>

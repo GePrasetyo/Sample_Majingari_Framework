@@ -16,4 +16,8 @@ EditorBuildSettings:
     guid: 7a6e122bd2b01425989087a299b6bb93
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 84bad6b1ce057ec4b8faf48060d26846, type: 2}
+<<<<<<< Updated upstream
     com.unity.input.settings: {fileID: 11400000, guid: 421ec55ef3a8cea448dd6b335c777e48, type: 2}
+=======
+    com.unity.localization.settings: {fileID: 11400000, guid: 25930de53600cc04fbd00b071f9a8c70, type: 2}
+>>>>>>> Stashed changes
