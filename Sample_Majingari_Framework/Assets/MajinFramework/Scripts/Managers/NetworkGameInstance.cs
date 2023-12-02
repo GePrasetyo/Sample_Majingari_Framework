@@ -11,27 +11,27 @@ namespace Majingari.Framework {
             base.Tick();
 
 
-            if (Input.GetKey(KeyCode.LeftShift)){
-                if (Input.GetKeyDown(KeyCode.H)) {
-                    ServiceLocator.Resolve<ConnectionLANSupport>()?.StartLocalSesssionHost();
-                    return;
-                }
+            //if (Input.GetKey(KeyCode.LeftShift)){
+            //    if (Input.GetKeyDown(KeyCode.H)) {
+            //        ServiceLocator.Resolve<ConnectionLANSupport>()?.StartLocalSesssionHost();
+            //        return;
+            //    }
 
-                if (Input.GetKeyDown(KeyCode.S)) {
-                    ServiceLocator.Resolve<ConnectionLANSupport>()?.AutoJoinLocalSession();
-                    return;
-                }
-            }
+            //    if (Input.GetKeyDown(KeyCode.S)) {
+            //        ServiceLocator.Resolve<ConnectionLANSupport>()?.AutoJoinLocalSession();
+            //        return;
+            //    }
+            //}
 
-            if (Input.GetKeyDown(KeyCode.H)) {
-                ServiceLocator.Resolve<UNetcodeConnectionHandler>()?.StartGameSessionHost();
-                return;
-            }
+            //if (Input.GetKeyDown(KeyCode.H)) {
+            //    ServiceLocator.Resolve<UNetcodeConnectionHandler>()?.StartGameSessionHost();
+            //    return;
+            //}
 
-            if (Input.GetKeyDown(KeyCode.J)) {
-                ServiceLocator.Resolve<UNetcodeConnectionHandler>()?.StartGameSesssionClient();
-                return;
-            }
+            //if (Input.GetKeyDown(KeyCode.J)) {
+            //    ServiceLocator.Resolve<UNetcodeConnectionHandler>()?.StartGameSesssionClient();
+            //    return;
+            //}
         }
     }
 }
