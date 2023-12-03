@@ -18,10 +18,11 @@ MonoBehaviour:
     TheGameMode: {fileID: 11400000, guid: 81d5df29ba92c274f89eaeebfcf590cc, type: 2}
   levelStreamCollection: []
   loadingHandler:
-    rid: 2088401816565841920
+    rid: 5151577090968780800
   references:
     version: 2
     RefIds:
-    - rid: 2088401816565841920
-      type: {class: DefaultLoadingStreamer, ns: Majingari.Framework.World, asm: Assembly-CSharp}
-      data: 
+    - rid: 5151577090968780800
+      type: {class: DefaultLoadingStreamer, ns: Majingari.Framework.World, asm: M_Framework}
+      data:
+        _fadeTime: 1
