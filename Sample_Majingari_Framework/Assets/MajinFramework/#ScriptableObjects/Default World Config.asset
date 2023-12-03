@@ -25,4 +25,4 @@ MonoBehaviour:
     - rid: 5151577090968780800
       type: {class: DefaultLoadingStreamer, ns: Majingari.Framework.World, asm: M_Framework}
       data:
-        _fadeTime: 1
+        _fadeSpeed: 1

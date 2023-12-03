@@ -22,4 +22,5 @@ MonoBehaviour:
     - rid: 2689431335059062786
       type: {class: NetworkGameInstance, ns: Majingari.Framework, asm: Assembly-CSharp}
       data:
+        stopLoadingOnSceneLoaded: 1
         gameStateMachine: {fileID: 9100000, guid: 218cae19280128c439eb1c1b1f041553, type: 2}
