@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9900589bcb8e384cbe512dd4fe701d4, type: 3}
+  m_Name: Test Game Mode Config
+  m_EditorClassIdentifier: 
+  _gameState: {fileID: 7904727573946660109, guid: 8060c0ab57dd94841b0a1bd2618772fa, type: 3}
+  _hudManager: {fileID: 4699055174348396330, guid: feb06f03f8be7d147a9f258dea86c73c, type: 3}
+  _inputManager: {fileID: 1820960732944318183, guid: dfcf74f5529752645b5f9db3f3c65ffd, type: 3}
+  _playerController: {fileID: 6171695853747937503, guid: d6fd03ab4b0e2574a853e94711d0493b, type: 3}
+  _playerState: {fileID: 7391121325645253768, guid: 011b067ebbd0f8d47a95228230cebcd1, type: 3}
+  _playerPawn: {fileID: 6863896294639714659, guid: 14c6a5ef1b126c14d8c830b2fb0024b9, type: 3}
+  cameraHandler:
+    rid: 5151577090968780826
+  references:
+    version: 2
+    RefIds:
+    - rid: 5151577090968780826
+      type: {class: DefaultCameraHandler, ns: Majingari.Framework, asm: M_Framework}
+      data: 

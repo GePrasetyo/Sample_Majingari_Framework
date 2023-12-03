@@ -16,6 +16,9 @@ MonoBehaviour:
   - Map: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
     mapName: SampleScene
     TheGameMode: {fileID: 11400000, guid: 81d5df29ba92c274f89eaeebfcf590cc, type: 2}
+  - Map: {fileID: 102900000, guid: 8f79d7c4decfde546b99747e9ed1e40c, type: 3}
+    mapName: Test123
+    TheGameMode: {fileID: 11400000, guid: 70ef0099ab2acfa49a561c357142f39c, type: 2}
   levelStreamCollection: []
   loadingHandler:
     rid: 5151577090968780800
