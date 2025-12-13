@@ -15,7 +15,8 @@ MonoBehaviour:
   classGameInstance:
     rid: 2689431335059062786
   worldConfigObject: {fileID: 11400000, guid: db8dd842114635b4db1e4a82cc85e875, type: 2}
-  editMode: 0
+  preInitializeSciptableObjects: []
+  editMode: 1
   references:
     version: 2
     RefIds:
